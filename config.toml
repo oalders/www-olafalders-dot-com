@@ -47,9 +47,9 @@ paginate = 10
 [languages]
   [languages.en]
     languageName = "English"
-    title = "oalders"
+    title = "olafalders.com"
     subtitle = "What I'm Hacking On"
-    owner = ""
+    owner = "Olaf Alders"
     keywords = ""
     copyright = "2015"
     menuMore = "Show more"
