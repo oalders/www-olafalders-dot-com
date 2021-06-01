@@ -3,7 +3,7 @@ title: Don’t Forget about URI::Heuristic
 author: oalders
 type: post
 date: 2016-07-12T20:51:27+00:00
-url: /2016-07-12-dont-forget-about-uriheuristic
+url: /2016/07/12/dont-forget-about-uriheuristic
 dsq_thread_id:
   - 5502201844
 categories:

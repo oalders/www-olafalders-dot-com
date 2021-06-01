@@ -3,7 +3,7 @@ title: Getting to Travis and GitHub Pages Quickly
 author: oalders
 type: post
 date: 2016-08-12T23:05:14+00:00
-url: /2016-08-12-getting-to-travis-and-github-pages-quickly
+url: /2016/08/12/getting-to-travis-and-github-pages-quickly
 dsq_thread_id:
   - 5064215573
 categories:

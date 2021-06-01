@@ -3,7 +3,7 @@ title: UserAgent Debugging Made Easy
 author: oalders
 type: post
 date: 2016-09-29T02:28:50+00:00
-url: /2016-09-29-useragent-debugging-made-easy
+url: /2016/09/29/useragent-debugging-made-easy
 dsq_thread_id:
   - 5202397902
 categories:

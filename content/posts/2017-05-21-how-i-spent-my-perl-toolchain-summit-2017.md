@@ -3,7 +3,7 @@ title: How I Spent my Perl Toolchain Summit 2017
 author: oalders
 type: post
 date: 2017-05-21T16:31:49+00:00
-url: /2017-05-21-how-i-spent-my-perl-toolchain-summit-2017
+url: /2017/05/21/how-i-spent-my-perl-toolchain-summit-2017
 categories:
   - Perl
   - Programming

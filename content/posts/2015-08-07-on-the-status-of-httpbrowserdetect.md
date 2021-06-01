@@ -3,7 +3,7 @@ title: On the status of HTTP::BrowserDetect
 author: oalders
 type: post
 date: 2015-08-07T10:54:41+00:00
-url: /2015-08-07-on-the-status-of-httpbrowserdetect
+url: /2015/08/07/on-the-status-of-httpbrowserdetect
 dsq_thread_id:
   - 4026013294
 categories:

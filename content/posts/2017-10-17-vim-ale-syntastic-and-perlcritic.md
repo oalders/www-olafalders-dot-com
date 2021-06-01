@@ -3,7 +3,7 @@ title: vim, Ale, Syntastic and Perl::Critic
 author: oalders
 type: post
 date: 2017-10-17T17:32:19+00:00
-url: /2017-10-17-vim-ale-syntastic-and-perlcritic
+url: /2017/10/17/vim-ale-syntastic-and-perlcritic
 categories:
   - Perl
   - Programming

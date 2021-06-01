@@ -3,7 +3,7 @@ title: Creating a Twitter List of CPAN Authors
 author: oalders
 type: post
 date: 2019-05-23T17:40:30+00:00
-url: /2019-05-23-creating-a-twitter-list-of-cpan-authors
+url: /2019/05/23/creating-a-twitter-list-of-cpan-authors
 categories:
   - MetaCPAN
   - Perl

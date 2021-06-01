@@ -3,7 +3,7 @@ title: How I Spent My 2015 Perl QA Hackathon
 author: oalders
 type: post
 date: 2015-04-26T17:22:10+00:00
-url: /2015-04-26-how-i-spent-my-2015-perl-qa-hackathon
+url: /2015/04/26/how-i-spent-my-2015-perl-qa-hackathon
 dsq_thread_id:
   - 3715590933
 categories:

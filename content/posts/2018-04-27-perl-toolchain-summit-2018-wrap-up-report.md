@@ -3,7 +3,7 @@ title: Perl Toolchain Summit 2018 Wrap-up Report
 author: oalders
 type: post
 date: 2018-04-27T13:41:08+00:00
-url: /2018-04-27-perl-toolchain-summit-2018-wrap-up-report
+url: /2018/04/27/perl-toolchain-summit-2018-wrap-up-report
 categories:
   - MetaCPAN
   - Perl

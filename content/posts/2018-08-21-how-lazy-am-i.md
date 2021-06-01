@@ -3,7 +3,7 @@ title: How lazy am I?
 author: oalders
 type: post
 date: 2018-08-21T16:54:50+00:00
-url: /2018-08-21-how-lazy-am-i
+url: /2018/08/21/how-lazy-am-i
 categories:
   - Perl
   - Programming

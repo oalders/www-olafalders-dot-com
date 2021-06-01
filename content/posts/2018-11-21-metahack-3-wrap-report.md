@@ -3,7 +3,7 @@ title: meta::hack 3 Wrap Report
 author: oalders
 type: post
 date: 2018-11-21T17:30:14+00:00
-url: /2018-11-21-metahack-3-wrap-report
+url: /2018/11/21/metahack-3-wrap-report
 categories:
   - MetaCPAN
   - Perl

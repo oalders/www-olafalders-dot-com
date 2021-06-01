@@ -3,7 +3,7 @@ title: I’ll be at the 2015 New York Perl Hackathon
 author: oalders
 type: post
 date: 2015-04-29T03:29:20+00:00
-url: /2015-04-29-ill-be-at-the-2015-new-york-perl-hackathon
+url: /2015/04/29/ill-be-at-the-2015-new-york-perl-hackathon
 categories:
   - MetaCPAN
   - Perl

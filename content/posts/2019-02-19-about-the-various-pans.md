@@ -3,7 +3,7 @@ title: About the Various PANs
 author: oalders
 type: post
 date: 2019-02-19T17:34:22+00:00
-url: /2019-02-19-about-the-various-pans
+url: /2019/02/19/about-the-various-pans
 categories:
   - Perl
   - Programming

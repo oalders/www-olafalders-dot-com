@@ -3,7 +3,7 @@ title: Adding History to fpp (Facebook PathPicker)
 author: oalders
 type: post
 date: 2016-01-14T03:53:57+00:00
-url: /2016-01-14-adding-history-to-fpp-facebook-pathpicker
+url: /2016/01/14/adding-history-to-fpp-facebook-pathpicker
 dsq_thread_id:
   - 4674490358
 categories:

@@ -3,7 +3,7 @@ title: HTTP::Response may have a different definition of success than you do
 author: oalders
 type: post
 date: 2015-10-24T04:10:31+00:00
-url: /2015-10-24-httpresponse-may-have-a-different-definition-of-success-than-you-do
+url: /2015/10/24/httpresponse-may-have-a-different-definition-of-success-than-you-do
 dsq_thread_id:
   - 4254033106
 categories:

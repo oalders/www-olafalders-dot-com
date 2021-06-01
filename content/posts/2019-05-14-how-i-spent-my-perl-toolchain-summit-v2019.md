@@ -3,7 +3,7 @@ title: How I Spent My Perl Toolchain Summit v2019
 author: oalders
 type: post
 date: 2019-05-14T13:04:07+00:00
-url: /2019-05-14-how-i-spent-my-perl-toolchain-summit-v2019
+url: /2019/05/14/how-i-spent-my-perl-toolchain-summit-v2019
 categories:
   - MetaCPAN
   - Perl

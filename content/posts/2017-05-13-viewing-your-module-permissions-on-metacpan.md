@@ -3,7 +3,7 @@ title: Viewing Your Module Permissions on MetaCPAN
 author: oalders
 type: post
 date: 2017-05-13T08:45:18+00:00
-url: /2017-05-13-viewing-your-module-permissions-on-metacpan
+url: /2017/05/13/viewing-your-module-permissions-on-metacpan
 categories:
   - MetaCPAN
   - Perl

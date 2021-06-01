@@ -4,7 +4,7 @@ title: Preparing for LWP Hack Night
 author: oalders
 type: post
 date: 2017-03-28T02:05:35+00:00
-url: /2017-03-28-preparing-for-lwp-hack-night
+url: /2017/03/28/preparing-for-lwp-hack-night
 dsq_thread_id:
   - 5674239765
 categories:

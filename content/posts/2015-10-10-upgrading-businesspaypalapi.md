@@ -3,7 +3,7 @@ title: Upgrading Business::PayPal::API
 author: oalders
 type: post
 date: 2015-10-10T02:55:45+00:00
-url: /2015-10-10-upgrading-businesspaypalapi
+url: /2015/10/10/upgrading-businesspaypalapi
 dsq_thread_id:
   - 4213300209
 categories:

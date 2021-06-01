@@ -3,7 +3,7 @@ title: WWW::Mechanize Best Practices
 author: oalders
 type: post
 date: 2018-04-13T04:41:11+00:00
-url: /2018-04-13-wwwmechanize-best-practices
+url: /2018/04/13/wwwmechanize-best-practices
 categories:
   - Perl
   - Programming

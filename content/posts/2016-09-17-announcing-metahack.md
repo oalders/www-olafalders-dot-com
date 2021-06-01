@@ -3,7 +3,7 @@ title: Announcing meta::hack
 author: oalders
 type: post
 date: 2016-09-17T04:30:49+00:00
-url: /2016-09-17-announcing-metahack
+url: /2016/09/17/announcing-metahack
 dsq_thread_id:
   - 5152274110
 categories:

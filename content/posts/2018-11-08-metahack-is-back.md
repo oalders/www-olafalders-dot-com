@@ -3,7 +3,7 @@ title: meta::hack is back!
 author: oalders
 type: post
 date: 2018-11-08T18:15:46+00:00
-url: /2018-11-08-metahack-is-back
+url: /2018/11/08/metahack-is-back
 categories:
   - MetaCPAN
   - Perl

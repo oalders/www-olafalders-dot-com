@@ -3,7 +3,7 @@ title: Introducing LWP::ConsoleLogger::Everywhere
 author: oalders
 type: post
 date: 2017-03-23T02:30:32+00:00
-url: /2017-03-23-introducing-lwpconsoleloggereverywhere
+url: /2017/03/23/introducing-lwpconsoleloggereverywhere
 dsq_thread_id:
   - 5708078222
 categories:

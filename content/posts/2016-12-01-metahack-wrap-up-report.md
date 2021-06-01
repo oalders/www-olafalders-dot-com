@@ -3,7 +3,7 @@ title: meta::hack Wrap-up Report
 author: oalders
 type: post
 date: 2016-12-01T02:54:10+00:00
-url: /2016-12-01-metahack-wrap-up-report
+url: /2016/12/01/metahack-wrap-up-report
 dsq_thread_id:
   - 5502199435
 categories:

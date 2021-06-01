@@ -3,7 +3,7 @@ title: Improving libwww-perl
 author: oalders
 type: post
 date: 2016-09-26T02:14:47+00:00
-url: /2016-09-26-improving-libwww-perl
+url: /2016/09/26/improving-libwww-perl
 dsq_thread_id:
   - 5174584950
 categories:

@@ -3,7 +3,7 @@ title: Stop Writing Your Own Commify Functions
 author: oalders
 type: post
 date: 2015-09-04T03:42:31+00:00
-url: /2015-09-04-stop-writing-your-own-commify-functions
+url: /2015/09/04/stop-writing-your-own-commify-functions
 dsq_thread_id:
   - 4095855809
 categories:

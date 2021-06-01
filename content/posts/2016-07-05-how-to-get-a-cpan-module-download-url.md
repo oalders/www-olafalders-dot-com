@@ -3,7 +3,7 @@ title: How to Get a CPAN Module Download URL
 author: oalders
 type: post
 date: 2016-07-05T23:46:20+00:00
-url: /2016-07-05-how-to-get-a-cpan-module-download-url
+url: /2016/07/05/how-to-get-a-cpan-module-download-url
 dsq_thread_id:
   - 4964836498
 categories:

@@ -3,7 +3,7 @@ title: MetaCPAN at the 2016 Perl QA Hackathon
 author: oalders
 type: post
 date: 2016-04-27T03:41:41+00:00
-url: /2016-04-27-metacpan-at-the-2016-perl-qa-hackathon
+url: /2016/04/27/metacpan-at-the-2016-perl-qa-hackathon
 dsq_thread_id:
   - 4780779076
 categories:

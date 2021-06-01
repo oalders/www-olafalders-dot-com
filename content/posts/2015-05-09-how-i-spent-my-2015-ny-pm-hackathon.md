@@ -3,7 +3,7 @@ title: How I Spent my 2015 NY.pm Hackathon
 author: oalders
 type: post
 date: 2015-05-09T02:26:16+00:00
-url: /2015-05-09-how-i-spent-my-2015-ny-pm-hackathon
+url: /2015/05/09/how-i-spent-my-2015-ny-pm-hackathon
 dsq_thread_id:
   - 3748895123
 categories:

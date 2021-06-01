@@ -3,7 +3,7 @@ title: Managing Your Travis CI Config Files with App::CISetup
 author: oalders
 type: post
 date: 2019-05-22T12:53:44+00:00
-url: /2019-05-22-managing-your-travis-ci-config-files-with-appcisetup.md
+url: /2019/05/22/managing-your-travis-ci-config-files-with-appcisetup.md
 categories:
   - Perl
   - Programming

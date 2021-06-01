@@ -3,7 +3,7 @@ title: Easy Perl OAuth Integration with Runkeeper and Spotify
 author: oalders
 type: post
 date: 2016-06-24T23:43:37+00:00
-url: /2016-06-24-easy-perl-oauth-integration-with-runkeeper-and-spotify
+url: /2016/06/24/easy-perl-oauth-integration-with-runkeeper-and-spotify
 dsq_thread_id:
   - 5502202472
 categories:

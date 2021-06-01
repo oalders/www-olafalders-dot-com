@@ -3,7 +3,7 @@ title: Announcing meta::hack v2
 author: oalders
 type: post
 date: 2017-10-12T15:57:35+00:00
-url: /2017-10-12-announcing-metahack-v2
+url: /2017/10/12/announcing-metahack-v2
 categories:
   - MetaCPAN
   - Perl

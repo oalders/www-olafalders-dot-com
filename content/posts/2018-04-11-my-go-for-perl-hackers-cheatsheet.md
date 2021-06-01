@@ -3,7 +3,7 @@ title: My “Go for Perl Hackers” Cheatsheet
 author: oalders
 type: post
 date: 2018-04-11T14:28:44+00:00
-url: /2018-04-11-my-go-for-perl-hackers-cheatsheet
+url: /2018/04/11/my-go-for-perl-hackers-cheatsheet
 categories:
   - Go
   - Perl
