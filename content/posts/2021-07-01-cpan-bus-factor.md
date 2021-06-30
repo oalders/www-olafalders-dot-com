@@ -28,7 +28,7 @@ For CPAN our definition is "a measurement of how risky it might be to start rely
 
 Let's say you've created a new module for exceptions, called `Exception::Yoda` ("there is no try"). If that name has never been used on CPAN before, when you do your first upload to PAUSE, you will be given the first-come indexing permission on `Exception::Yoda`. This means that PAUSE will include your releases of that module in the CPAN Index.
 
-The CPAN Index maps module names to tarballs in author directories. When someone runs `cpm install -g Exception::Yoda`, their CPAN client looks for the module name in the CPAN Index, and if found, it downloads the associated tarball, and tries to install it.
+The CPAN Index maps module names to tarballs in author directories. When someone runs `cpm install -g Exception::Yoda`, their [cpm](https://metacpan.org/pod/App::cpm) script looks for the module name in the CPAN Index, and if found, it downloads the associated tarball, and tries to install it.
 
 If anyone else tries to upload a module called `Exception::Yoda`, PAUSE will see that you're the only person with an indexing permission, and their version won't be added to the CPAN Index.
 
@@ -42,7 +42,7 @@ Now there are two of you who can do releases. So if you get busy on a work proje
 For many tasks there are multiple modules on CPAN to choose between. What criteria should you use to select one to rely on? There are a number that are well established:
 
 * Does it provide the function(s) you need, and are they correct? Related: is the test suite up to scratch?
-* The relative performance of the different modules. Some years back I reviewed a number of collections of modules for the same task. In most cases I found three orders of magnitude difference between the fastest and slowest.
+* The relative performance of the different modules. Some years back [Neil reviewed a number of collections of modules for the same task](http://neilb.org/reviews/). In most cases he found three orders of magnitude difference between the fastest and slowest.
 * How many other CPAN distributions do they use? For a `::Tiny` module that might be zero, but it could be a lot more. You think you're adding one dependency to your work stack, but in reality you could be adding a lot more.
 * How many other CPAN distributions rely on the module in question? This can range from zero to tens of thousands. The model for this is called the River of CPAN, and MetaCPAN will show you the "river position" (number of downstream dependencies) when you look at a module / distribution.
 
