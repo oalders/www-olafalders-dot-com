@@ -2,8 +2,8 @@
 title: CPAN Bus Factor
 author: oalders
 type: post
-date: 2021-06-29T00:00:00+00:00
-url: /2021/07/01/cpan-bus-factor
+date: 2021-06-30T00:00:00+00:00
+url: /2021/06/30/cpan-bus-factor
 categories:
   - Perl
   - Programming
