@@ -12,7 +12,7 @@ categories:
 
 ---
 
-[The following guest post was written by [Neil Bowers](http://neilb.org/index.html)]
+[The following post is the result of a collaboration with [Neil Bowers](http://neilb.org/index.html)]
 
 # CPAN Bus Factor
 
