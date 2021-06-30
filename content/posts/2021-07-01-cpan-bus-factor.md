@@ -16,6 +16,10 @@ categories:
 
 # CPAN Bus Factor
 
+Perhaps you've noticed a new metric when browsing MetaCPAN?
+
+![Moose bus factor](/images/moose-bus-factor.png)
+
 ## What is "bus factor"?
 
 [Wikipedia](https://en.wikipedia.org/wiki/Bus_factor) defines "bus factor" as 
