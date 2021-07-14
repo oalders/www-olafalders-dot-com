@@ -125,4 +125,16 @@ Once you're done, just `<enter>` and you'll have a command line that is ready to
 prove -lv t/00-load.t t/area_link.t t/bad-request.t
 ```
 
-That's it! 
+That's it! You can see this in action by clicking the image below.
+
+[![asciicast](https://asciinema.org/a/Ek1rNymnwXpY9uXm9OzFgHeVt.png)](https://asciinema.org/a/Ek1rNymnwXpY9uXm9OzFgHeVt)
+
+# Addendum:
+
+Thanks to [Andy Lester](https://www.reddit.com/r/perl/comments/ojqon2/adding_tab_completion_to_prove_and_your_other/h55u6l3) for pointing out that 
+
+```
+ack -f --perltest
+``` 
+
+can also be used to get a list of Perl test files.
