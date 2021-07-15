@@ -129,6 +129,8 @@ That's it! You can see this in action by clicking the image below.
 
 [![asciicast](https://asciinema.org/a/Ek1rNymnwXpY9uXm9OzFgHeVt.png)](https://asciinema.org/a/Ek1rNymnwXpY9uXm9OzFgHeVt)
 
+To take this to the next level with a preview pane, [see my next post](/2021/07/15/tab-completion-with-preview).
+
 # Addendum:
 
 Thanks to [Andy Lester](https://www.reddit.com/r/perl/comments/ojqon2/adding_tab_completion_to_prove_and_your_other/h55u6l3) for pointing out that 
