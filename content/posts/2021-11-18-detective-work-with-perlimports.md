@@ -103,3 +103,5 @@ gh pr create
 ```
 
 Thanks to [Andy Lester](https://metacpan.org/author/PETDANCE) for the lightning fast merge on the pull request. 🚀
+
+Edit: After this post was first published, [Matt Trout](https://metacpan.org/author/MSTROUT) pointed out that he had written [Devel::Wherefore](https://metacpan.org/pod/Devel::Wherefore) to solve this same problem. It won't rewrite your code for you, but it's good to have options!
