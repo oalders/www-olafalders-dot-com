@@ -9,7 +9,7 @@ categories:
   - Programming
   - LWP::ConsoleLogger
   - CPAN
-
+summary: "Today an interesting question came up about whether or not Carton uses HTTPS and also which CPAN mirror it downloads from. I wondered if [LWP::ConsoleLogger::Everywhere](https://metacpan.org/pod/LWP::ConsoleLogger::Everywhere) could be helpful."
 ---
 
 # Sniffing Network Traffic with LWP::ConsoleLogger::Everywhere

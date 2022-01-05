@@ -8,7 +8,7 @@ categories:
   - Perl
   - Programming
   - perlimports
-
+summary: "I was working on some Perl code which included a function whose origin was not obvious. Here's how I used [perlimports](https://metacpan.org/pod/perlimports) to figure it out."
 ---
 Today I was working on a test which uses [Test::WWW::Mechanize](https://metacpan.org/pod/Test::WWW::Mechanize). I was looking at the source of the `text_contains` method, which currently looks like:
 
