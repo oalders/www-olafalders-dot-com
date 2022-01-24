@@ -20,7 +20,8 @@ If you'd like to join the libwww-perl org, then that would be great as well. Pro
 
 Here's a quick summary of the repositories which are currently in the org:
 
-<pre>olaf$ github-mergevelocity --url libwww-perl/WWW-Mechanize --url libwww-perl/libwww-perl --url libwww-perl/URI --url libwww-perl/Net-HTTP --url libwww-perl/HTTP-Message --url libwww-perl/LWP-Protocol-https --url libwww-perl/www-mechanize-cached
+```
+olaf$ github-mergevelocity --url libwww-perl/WWW-Mechanize --url libwww-perl/libwww-perl --url libwww-perl/URI --url libwww-perl/Net-HTTP --url libwww-perl/HTTP-Message --url libwww-perl/LWP-Protocol-https --url libwww-perl/www-mechanize-cached
 .-------------+----------------------+----------+-----+----------+---------------+----------+---------------+----------+-----------------.
 | user        | repo                 | velocity | PRs | merged   | merge days    | closed   | close days    | open     | open days       |
 +-------------+----------------------+----------+-----+----------+---------------+----------+---------------+----------+-----------------+
@@ -32,13 +33,13 @@ Here's a quick summary of the repositories which are currently in the org:
 | libwww-perl | HTTP-Message         | -347     | 28  | 29% (8)  | 101/PR (810)  | 18% (5)  | 447/PR (2236) | 54% (15) | 604/PR (9053)   |
 | libwww-perl | WWW-Mechanize        | -360     | 34  | 47% (16) | 135/PR (2159) | 26% (9)  | 391/PR (3516) | 26% (9)  | 1140/PR (10256) |
 '-------------+----------------------+----------+-----+----------+---------------+----------+---------------+----------+-----------------'
-</pre>
+```
 
 **velocity** indicates how likely a pull request is likely to get merged. You can see that [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) is the worst offender of the bunch, despite my minimal cleanup attempts. You can mostly ignore [WWW::Mechanize::Cached](https://metacpan.org/pod/WWW::Mechanize::Cached) for these purposes as that's a module I've been actively maintaining for a lot of years.
 
 However, you can see that the libwww-perl ([LWP::UserAgent](https://metacpan.org/pod/LWP::UserAgent)) repo, for instance takes about 874 days per pull request before that pull is merged. It takes an average of 165 days before a PR is closed and the remaining open pulls have been open for 801 days each. If you're looking at over 2 years before the average pull request is merged, you can see how this probably isn't encouraging people to get involved.
 
-For my part, I've added a Travis CI config to all of the repositories and I've also converted [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) to use [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla). Not all of the repositories are in a passing state, but at least now we have a baseline for passing and failing tests. 
+For my part, I've added a Travis CI config to all of the repositories and I've also converted [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) to use [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla). Not all of the repositories are in a passing state, but at least now we have a baseline for passing and failing tests.
 
 Now, I don't have co-maint on most of a lot of the remaining modules, but I'm willing to pester people who do. People can also help by releasing TRIAL distributions so that CPAN testers can smoke the dist before we pester someone to release a module.
 
@@ -46,7 +47,7 @@ So, that's my plea for today. Please feel free to pitch in and help clean this u
 
 For those of you who are bound to say "what about [Mojo::UserAgent](https://metacpan.org/pod/Mojo::UserAgent) or module X", I have two responses:
 
-1) TIMTOWDI  
+1) TIMTOWDI
 2) It's easier to maintain these modules than to update and re-release all of the CPAN which currently use them
 
 Fortunately, I don't know of any really terrible bugs which have gone unfixed, but I think if these modules do see active development and releases, then any terrible bugs will be easier to patch and ship if and when they do rear their ugly heads.

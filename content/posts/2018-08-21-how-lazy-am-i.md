@@ -29,21 +29,23 @@ I give you [lazy][6].
 
 Let's take an example script, called `foo.pl`:
 
-<pre><code class="perl">use strict;
+```perl
+use strict;
 use warnings;
 use say;
 
 use Open::This qw( to_editor_args );
 
 say join ' ', to_editor_args('LWP::UserAgent::new()');
-</code></pre>
+```
 
 If you are missing an installed module, your output might look something like:
 
-<pre><code class="bash">$ perl foo.pl
+```
+$ perl foo.pl
 Can't locate Open/This.pm in @INC (you may need to install the Open::This module) (@INC contains: /Users/olafalders/.plenv/versions/5.26.1/lib/perl5/site_perl/5.26.1/darwin-2level /Users/olafalders/.plenv/versions/5.26.1/lib/perl5/site_perl/5.26.1 /Users/olafalders/.plenv/versions/5.26.1/lib/perl5/5.26.1/darwin-2level /Users/olafalders/.plenv/versions/5.26.1/lib/perl5/5.26.1) at foo.pl line 3.
 BEGIN failed--compilation aborted at foo.pl line 3.
-</code></pre>
+```
 
 Let's try re-invoking this script, but this time with [lazy][6]:
 
@@ -51,11 +53,12 @@ Let's try re-invoking this script, but this time with [lazy][6]:
 
 This will attempt to install any missing dependencies in a place where they are globally available to you. If all goes well you'll be installing dependencies and running your code all in one invocation of your script. Does it work? Let's test it.
 
-<pre><code class="bash">$ perl -Mlazy foo.pl
+```
+$ perl -Mlazy foo.pl
 DONE install Open-This-0.000009 (using prebuilt)
 1 distribution installed.
 +20 /Users/olafalders/.plenv/versions/5.26.1/lib/perl5/site_perl/5.26.1/LWP/UserAgent.pm
-</code></pre>
+```
 
 It _did_ work and it was pretty painless. `lazy` noticed that a module ([Open::This][7]) was missing, so it installed it, loaded it and then allowed the script successfully to run to completion.
 
@@ -71,7 +74,8 @@ If you'd like to keep the new dependencies in a sandbox, you can do this:
 
 This will install the missing modules to the `my_sandbox` folder and it will also use this folder to find them. Your install might look something like:
 
-<pre><code class="bash">$ perl -Mlocal::lib=my_sandbox -Mlazy=-v foo.pl
+```
+$ perl -Mlocal::lib=my_sandbox -Mlazy=-v foo.pl
 
 6615 DONE resolve   (0.155sec) Open::This -&gt; Open-This-0.000009 (from MetaDB)
 6615 DONE fetch     (0.040sec) Open-This-0.000009 (using prebuilt)
@@ -149,7 +153,7 @@ my_sandbox/
 22 directories, 29 files
 
 6 directories, 0 files
-</code></pre>
+```
 
 But wait, there's more!
 
@@ -161,7 +165,8 @@ If you're too lazy to specify a local directory, but you still want to use a loc
 
 In my case it looks like:
 
-<pre><code class="bash">$ tree ~/perl5/lib/perl5
+```
+$ tree ~/perl5/lib/perl5
 /Users/olafalders/perl5/lib/perl5
 ├── 5.26.1
 │   └── darwin-2level
@@ -211,7 +216,7 @@ In my case it looks like:
             └── Tiny
 
 19 directories, 27 files
-</code></pre>
+```
 
 But wait, there's more!
 
@@ -223,13 +228,14 @@ If you want to pass some extra flags to `cpm` you can do this by passing them to
 
 This switches on `cpm`&#8216;s verbose reporting. The first part of the output now looks like:
 
-<pre><code class="bash">$ perl -Mlazy=-v foo.pl
+```
+$ perl -Mlazy=-v foo.pl
 10476 DONE resolve   (0.159sec) Open::This -&gt; Open-This-0.000009 (from MetaDB)
 10476 DONE fetch     (0.041sec) Open-This-0.000009 (using prebuilt)
 10476 DONE install   (0.053sec) Open-This-0.000009 (using prebuilt)
 1 distribution installed.
 +20 /Users/olafalders/.plenv/versions/5.26.1/lib/perl5/site_perl/5.26.1/LWP/UserAgent.pm
-</code></pre>
+```
 
 Now, if you also want to remove the colour from this reporting, that's easy enough:
 
@@ -243,9 +249,10 @@ Check `cpm --help` for a more exhaustive list of available options.
 
 Anything you can do via command line switches, you can also do directly in your code.
 
-    use local::lib qw( my_sandbox );
-    use lazy qw( -v --no-color );
-    
+```
+use local::lib qw( my_sandbox );
+use lazy qw( -v --no-color );
+```
 
 ## In Your Editor
 

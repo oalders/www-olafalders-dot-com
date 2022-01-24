@@ -14,7 +14,8 @@ Writing your own commify function may well be right up there with writing your o
 
 Let's see if we can do this:
 
-<pre>#!/usr/bin/env perl
+```perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -29,11 +30,12 @@ foreach my $locale ( 'de', 'en', 'fr', 'es', 'ja', 'ru', 'pt', 'zh', ) {
 
     say $locale, "\t", $decf->format( 12345 );
 }
-</pre>
+```
 
 Easy, right? Not only does [CLDR::Number][1] handle commification (is that a word?) -- it also does this correctly for various locales. If you're trying to internationalize your application, this can save you a lot of time. Let's look at the output:
 
-<pre>de	12.345
+```
+de	12.345
 en	12,345
 fr	12 345
 es	12 345
@@ -41,13 +43,14 @@ ja	12,345
 ru	12 345
 pt	12.345
 zh	12,345
-</pre>
+```
 
 You can see that the differences are significant enough that you don't want to re-invent this wheel. The fact that we're using a "Decimal" formatter here is a bit misleading. It'll handle whole numbers just fine.
 
 Let's try it with some digits after the decimal place, though.
 
-<pre>de	12.345,67
+```
+de	12.345,67
 en	12,345.67
 fr	12 345,67
 es	12 345,67
@@ -55,13 +58,14 @@ ja	12,345.67
 ru	12 345,67
 pt	12.345,67
 zh	12,345.67
-</pre>
+```
 
 That works nicely as well.
 
 Now, did I mention that this distribution includes a couple of other formatters? Let's look at currency. That's another tricky one.
 
-<pre>#!/usr/bin/env perl
+```perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -76,11 +80,12 @@ foreach my $locale ( 'de', 'en', 'fr', 'es', 'ja', 'ru', 'pt', 'zh', ) {
 
     say $locale, "\t", $curf->format( 12345.67 );
 }
-</pre>
+```
 
 The output is:
 
-<pre>de	12.345,67 $
+```
+de	12.345,67 $
 en	$12,345.67
 fr	12 345,67 $US
 es	12 345,67 $
@@ -88,13 +93,14 @@ ja	$12,345.67
 ru	12 345,67 $
 pt	US$12.345,67
 zh	US$ 12,345.67
-</pre>
+```
 
 Crazy, right? I had no idea that representing a price in USD could vary so wildly across locales.
 
 Let's have a look at the last formatter, then.
 
-<pre>#!/usr/bin/env perl
+```perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -109,11 +115,12 @@ foreach my $locale ( 'de', 'en', 'fr', 'es', 'ja', 'ru', 'pt', 'zh', ) {
 
     say $locale, "\t", $perf->format( 0.1234 );
 }
-</pre>
+```
 
 The output looks like:
 
-<pre>de	12 %
+```
+de	12 %
 en	12%
 fr	12 %
 es	12%
@@ -121,7 +128,7 @@ ja	12%
 ru	12 %
 pt	12%
 zh	12%
-</pre>
+```
 
 We can see here that the percent formatter rounds to the nearest percent by default. We can change that with an argument when creating the formatter.
 
@@ -130,7 +137,8 @@ We can see here that the percent formatter rounds to the nearest percent by defa
 
 Our output will then look like:
 
-<pre>de	12,3 %
+```
+de	12,3 %
 en	12.3%
 fr	12,3 %
 es	12,3%
@@ -138,7 +146,7 @@ ja	12.3%
 ru	12,3 %
 pt	12,3%
 zh	12.3%
-</pre>
+```
 
 I could expand on the various arguments a bit more, but this is the gist of it. This is an extremely handy module which saves you from writing your own formatters and makes it easy for you to keep folks across the globe happy with your internationalization efforts.
 
@@ -148,7 +156,8 @@ I've personally already gotten a lot of use out of this code . May thanks to [No
 
 After I originally published this post, [Tom Legrady][4] was kind enough to reach out to me to say that relying on "en" as a locale may not always be what you want.  Consider the case of currency.  Let's tweak our example to display various "en" locales.
 
-<pre>#!/usr/bin/env perl
+```perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -169,11 +178,12 @@ foreach my $locale ( @en_locales ) {
 
     say $locale, "\t", $curf->format( 12345.67 );
 }
-</pre>
+```
 
 Let's have a look at the results:
 
-<pre>en_AU	US$12,345.67
+```
+en_AU	US$12,345.67
 en_BZ	US$12,345.67
 en_CA	US$12,345.67
 en_CB	$12,345.67
@@ -186,17 +196,18 @@ en_PH	US$12,345.67
 en_ZA	US$12 345,67
 en_TT	US$12,345.67
 en_US	$12,345.67
-</pre>
+```
 
 If you look closely, you'll see 4 distinct currency formats just across various "en" locales. I've sorted them by popularity across the various locales. (I should note that I was surprised at the outcome.)
 
-<pre>{
+```perl
+{
     US$12,345.67    => 7,
     $12,345.67      => 4,
     US$ 12,345.67   => 1,
     US$12 345,67    => 1,
 }
-</pre>
+```
 
 So, if you can get to the most specific, correct locale for a user, it probably makes sense to use that locale. Thanks, Tom!
 

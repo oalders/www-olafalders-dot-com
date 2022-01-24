@@ -13,7 +13,8 @@ categories:
 ---
 Every so often you find yourself requiring the download URL for a CPAN module. You can use the MetaCPAN API to do this quite easily, but depending on your use case, you may not be able to do this in a single query. Well, that's actually not entirely true. Now that we have v1 of the MetaCPAN API deployed, you can test out the shiny new (experimental) **download_url** endpoint. This was an endpoint added by [Clinton Gormley][1] at the QA Hackathon in Berlin. Its primary purpose is to make it easy for an app like [cpanm][2] to figure out which archive to download when a module needs to be installed. <del datetime="2016-07-06T14:38:21+00:00">[MetaCPAN::Client](https://metacpan.org/pod/MetaCPAN::Client) doesn't support this new endpoint yet, but</del> if you want to take advantage of it, it's pretty easy.
 
-<pre>use strict;
+```perl
+use strict;
 use warnings;
 use feature qw( say );
 
@@ -32,20 +33,21 @@ my $uri = uri(
 
 my $res = $ua->get($uri);
 say decode_json( $res->decoded_content )->{download_url};
-</pre>
+```
 
 Now invoke your script:
 
-`<br />
-olaf$ perl download_url.pl Plack<br />
-https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Plack-1.0039.tar.gz<br />
-` 
+```
+$ perl download_url.pl Plack
+https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Plack-1.0039.tar.gz
+```
 
 ## Update!
 
 After I originally wrote this post, [MICKEY][3] stepped up and actually added the functionality to [MetaCPAN::Client][4]. A huge thank you to him for doing this. 🙂 Let's try this again:
 
-<pre>use strict;
+```perl
+use strict;
 use warnings;
 use feature qw( say );
 
@@ -55,7 +57,7 @@ my $mcpan = MetaCPAN::Client->new( version => 'v1' );
 my $module = shift @ARGV;
 
 say $mcpan->download_url( $module )->download_url;
-</pre>
+```
 
 That cuts the lines of code almost in half and is less error prone than crafting the query ourselves. I'd encourage you to use [MetaCPAN::Client][4] unless you have a compelling reason not to.
 

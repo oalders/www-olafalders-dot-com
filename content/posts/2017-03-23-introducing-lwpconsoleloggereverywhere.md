@@ -14,8 +14,9 @@ In an earlier post, I introduced you to [LWP::ConsoleLogger][1]. I've been using
 
 It's quite simple to use.
 
-<pre>use LWP::ConsoleLogger::Everywhere;
-</pre>
+```perl
+use LWP::ConsoleLogger::Everywhere;
+```
 
 Simply add this line to your code and run it. Any objects of the [LWP::UserAgent](https://metacpan.org/pod/LWP::UserAgent) family should now dump extensive logging information to your terminal. It can get a bit fancier than that, but this is really all you need to know in order to get started debugging 3rd party LWP::UserAgent-based HTTP requests.
 

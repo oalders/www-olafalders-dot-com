@@ -16,9 +16,11 @@ Recently I found a great little [Twitter command line tool][1] called `t`. It do
   * add the [@metacpan][2] account to the list
   * display the accounts which are now in the list we've just created
 
-<pre><code class="language-bash">t list create my-list-of-people
+```bash
+t list create my-list-of-people
 t list add my-list-of-people @metacpan
 t list members my-list-of-people</code></pre>
+```
 
 I thought it would be fun to create a Twitter list of CPAN authors using some of the data in the MetaCPAN API. Authors can [update their profiles on MetaCPAN][3] to add one or more Twitter accounts. This data can then be found in the `author` type of the MetaCPAN API, in the `profile` key. To find out how many Twitter usernames of CPAN authors we can get, we'll create a script that looks something like this:
 

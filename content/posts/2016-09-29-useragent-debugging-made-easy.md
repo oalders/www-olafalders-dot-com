@@ -14,7 +14,8 @@ Earlier today I saw [a recent blog post][1] from [Gabor Szabo][2]. In it, he sho
 
 Gabor's original script looks like this:
 
-<pre>use strict;
+```perl
+use strict;
 use warnings;
 use v5.10;
 use LWP::UserAgent;
@@ -27,11 +28,12 @@ $request->authorization_basic('szabgab', '*******');
  
 my $response = $ua->request($request);
 say $response->as_string();
-</pre>
+```
 
 Let's run it to see what the output looks like.
 
-<pre>olaf$ perl gabor.pl
+```perl
+olaf$ perl gabor.pl
 HTTP/1.0 401 Unauthorized
 Connection: close
 Date: Thu, 29 Sep 2016 02:07:34 GMT
@@ -47,11 +49,12 @@ Client-SSL-Cipher: AES128-GCM-SHA256
 Client-SSL-Socket-Class: IO::Socket::SSL
 
 Authorization required
-</pre>
+```
 
 Here's the debugging version. Note the important changes are on lines 4 and 9.
 
-<pre>use strict;
+```perl
+use strict;
 use warnings;
 use v5.10;
 use LWP::ConsoleLogger::Easy qw( debug_ua );
@@ -65,11 +68,12 @@ my $request = GET 'https://pause.perl.org/pause/authenquery';
 $request->authorization_basic( 'szabgab', '*******' );
 
 my $response = $ua->request($request);
-</pre>
+```
 
 The output we get is:
 
-<pre>olaf$ perl basic-authentication.pl
+```perl
+olaf$ perl basic-authentication.pl
 GET https://pause.perl.org/pause/authenquery
 
 .----------------+----------------------------.
@@ -111,11 +115,12 @@ GET https://pause.perl.org/pause/authenquery
 +------------------------+
 | Authorization required |
 '------------------------'
-</pre>
+```
 
 You can see that the debugging version is just one line longer. I added 2 lines and removed a print statement. It prints out a whole pile of (nicely?) formatted information. Let's try running it with valid credentials. (Brace yourself, there's going to be a lot of output.)
 
-<pre>olaf$ LWPCL_REDACT_HEADERS='Authorization' perl basic-authentication.pl
+```
+olaf$ LWPCL_REDACT_HEADERS='Authorization' perl basic-authentication.pl
 GET https://pause.perl.org/pause/authenquery
 
 .----------------+------------------.
@@ -287,7 +292,7 @@ GET https://pause.perl.org/pause/authenquery
 | tadminMonitor bad xhtml output stored from previous sessions coredumpadminN/A &#160; Rev: 1071.02 To validate, d- |
 | ownload page first.                                                                                               |
 '-------------------------------------------------------------------------------------------------------------------'
-</pre>
+```
 
 You can see that I ran the script with `LWPCL_REDACT_HEADERS='Authorization'`. That's a handy flag to use if you want to copy/paste an example when asking for help publicly. It replaced the **Authorization** header value with **[REDACTED]**. That's maybe not a big deal here, but there are cases where it's more important. See also `LWP_REDACT_PARAMS`.
 
@@ -295,7 +300,8 @@ Let's make it prettier. We'll do this by installing [HTML::FormatText::Lynx](htt
 
 Let's run it again. I'll only show you the changed part. Instead of just displaying the text with the HTML stripped away, we get something nicer to look at.
 
-<pre>.------------------------------------------------------------------------------------------------------------------------------------------------------.
+```
+.------------------------------------------------------------------------------------------------------------------------------------------------------.
 | Text                                                                                                                                                 |
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
 | [1]PAUSE Logo                                                                                                                                        |
@@ -421,11 +427,12 @@ Let's run it again. I'll only show you the changed part. Instead of just display
 |   21. http://jigsaw.w3.org/css-validator/                                                                                                            |
 |   22. http://validator.w3.org/file-upload.html                                                                                                       |
 '------------------------------------------------------------------------------------------------------------------------------------------------------'
-</pre>
+```
 
 Now, we can also turn down the verbosity of the script by passing a flag to `debug_ua()`. Any integer from 0-8 will do the trick. Let's try 6.
 
-<pre>use strict;
+```perl
+use strict;
 use warnings;
 use v5.10;
 use LWP::ConsoleLogger::Easy qw( debug_ua );
@@ -439,11 +446,12 @@ my $request = GET 'https://pause.perl.org/pause/authenquery';
 $request->authorization_basic( 'oalders', 'seekrit' );
 
 my $response = $ua->request($request);
-</pre>
+```
 
 Let's see what we get:
 
-<pre>olaf$ LWPCL_REDACT_HEADERS='Authorization' perl basic-authentication.pl
+```
+olaf$ LWPCL_REDACT_HEADERS='Authorization' perl basic-authentication.pl
 GET https://pause.perl.org/pause/authenquery
 
 .----------------+------------------.
@@ -478,7 +486,7 @@ GET https://pause.perl.org/pause/authenquery
 | Title                   | PAUSE: menu                                                                                                                |
 | Vary                    | accept-encoding                                                                                                            |
 '-------------------------+----------------------------------------------------------------------------------------------------------------------------'
-</pre>
+```
 
 That's far easier to read now.
 

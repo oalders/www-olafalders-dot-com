@@ -28,13 +28,14 @@ As far as the benchmarking with respect to other modules goes, I'm not sure if N
 
 There is, however, one thing I am able to benchmark and that is the speed at which I'm traditionally able to merge pull request for this module. Recently I wrote [github-mergevelocity][11], which can tell you how responsive a repository has historically been to attempts at collaboration. Let's see how HTTP::BrowserDetect performs:
 
-<pre>bash-3.2$ github-mergevelocity --url oalders/http-browserdetect
+```
+bash-3.2$ github-mergevelocity --url oalders/http-browserdetect
 .---------+--------------------+----------+-----+----------+------------+--------+------------+------+-----------.
 | user    | repo               | velocity | PRs | merged   | merge days | closed | close days | open | open days |
 +---------+--------------------+----------+-----+----------+------------+--------+------------+------+-----------+
 | oalders | http-browserdetect | 230      | 61  | 98% (60) | 3/PR (194) | 2% (1) | 2/PR (2)   | 0    | 0         |
 '---------+--------------------+----------+-----+----------+------------+--------+------------+------+-----------'
-</pre>
+```
 
 60 out of 61 pull requests have so far been merged via the Github "merge" button. On average, it takes 3 days for a pull request to get merged. There are no currently open pull requests and the one request which was closed was handled within 2 days. I'm happy with that record. There are, no doubt, authors who are far more responsive than this, but as an open source contributor, if I get a pull request merged within a week or two of being sent, that seems pretty responsive to me.
 

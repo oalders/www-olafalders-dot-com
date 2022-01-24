@@ -14,23 +14,31 @@ Disclaimer: I'm sure this functionality exists elsewhere, but this was a fun lit
 
 Often, when I'm working locally I like to bounce right over to a GitHub repository url to check something. I ended up writing a bit of code to make this easier. While I was at it, I decided it would be nice to have the same thing for Travis URLs. So, I've released this as part of [Git::Helpers][1].
 
-When you're inside a Git repository, you can use [gh-open][2] to open a browser window with the GitHub URL of your repository. `gh-open` also accepts an origin name as an argument, so 
+When you're inside a Git repository, you can use [gh-open][2] to open a browser window with the GitHub URL of your repository. `gh-open` also accepts an origin name as an argument, so
 
-<pre>gh-open upstream</pre>
+```
+gh-open upstream
+```
 
-would open a tab in your default browser containing your upstream's URL, assuming you have an origin by that name. Don't specify a remote name and it will assume **origin**: 
+would open a tab in your default browser containing your upstream's URL, assuming you have an origin by that name. Don't specify a remote name and it will assume **origin**:
 
-<pre>gh-open</pre>
+```
+gh-open
+```
 
 It doesn't currently care which branch you're on, but patches welcome (in the kindest sense of the expression).
 
-If you want to check your Travis page for the repository then [travis-open][2] will do the same kind of thing. It also accepts an origin name, just as `gh-open` does: 
+If you want to check your Travis page for the repository then [travis-open][2] will do the same kind of thing. It also accepts an origin name, just as `gh-open` does:
 
-<pre>travis-open upstream</pre>
+```
+travis-open upstream
+```
 
-or defaults to origin if you don't: 
+or defaults to origin if you don't:
 
-<pre>travis-open</pre>
+```
+travis-open
+```
 
  [1]: https://metacpan.org/pod/Git::Helpers
  [2]: https://metacpan.org/pod/distribution/Git-Helpers/bin/gh-open

@@ -16,14 +16,15 @@ This has bitten me before, so I thought it was worth writing about.  [This RT ti
 
 Consider this code:
 
-<pre>use LWP::UserAgent;
+```perl
+use LWP::UserAgent ();
 my $ua = LWP::UserAgent->new;
 my $response = LWP::UserAgent->get('http://example.com/foobar');
 
 if ( $response->is_success ) {
    ...
 }
-</pre>
+```
 
 99 times out of 100, this will do what you mean. Occasionally it doesn't. 
 
@@ -39,14 +40,15 @@ Consider what happens in this case where [HTML::HeadParser is not installed](htt
 
 If you want to check for success with confidence, you may want to check the &#8216;X-Died' header as well.
 
-<pre>use LWP::UserAgent;
+```perl
+use LWP::UserAgent ();
 my $ua = LWP::UserAgent->new;
 my $response = LWP::UserAgent->get('http://example.com/foobar');
 
 if ( $response->is_success && !$response->header('X-Died') ) {
    ...
 }
-</pre>
+```
 
 That seems like a lot of work, so [I've proposed a workaround](https://github.com/libwww-perl/http-message/pull/25/files) that will at least warn on the fact that the &#8216;X-Died' header exists. I don't know what the right answer is, but I do know that the current behaviour is confusing.
 

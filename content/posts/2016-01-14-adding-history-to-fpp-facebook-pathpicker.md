@@ -22,9 +22,10 @@ As part of the process, I found an open Github issue for \`fpp\` history. After 
 
 On my machines, \`~/.fpp/.fpp.sh\` generally looks something like this, where the \_second last\_ line in the file contains the line which I want to re-execute. (There's a blank line which starts the file, but my syntax highlighter seems to be stripping it away here).
 
-<pre>vim -O './README.md'
+```
+vim -O './README.md'
 exit;
-</pre>
+```
 
 I figured I could pretty easily grab this line from \`~/.fpp/.fpp.sh\` and log it to my own history file. I'd then add a little functionality to make it all easier to work with. I had thought about doing this in Perl, but just keeping everything in my \`.bashrc\` file felt like it was going to be the most portable solution. I didn't want to have to do anything more complicated than updating and sourcing my dot files in order to get this to work.
 
@@ -40,7 +41,8 @@ I'm not by any stretch an expert in shell scripting, so I did a lot of searching
 
 This is what I added to my \`[.bashrc](https://github.com/oalders/dot-files/blob/master/bashrc)\`. Usage is contained inline, in the comments.
 
-<pre>function fpp() {
+```bash
+function fpp() {
     local fpp=$(type -fp fpp)
 
     HISTORY_FILE="$HOME/.fpp/.fpp_history"
@@ -86,7 +88,7 @@ This is what I added to my \`[.bashrc](https://github.com/oalders/dot-files/blob
         echo $LAST_COMMAND >> $HISTORY_FILE
     fi
 }
-</pre>
+```
 
 This will get out of date over time, so the canonical version should always be found in my [dot-files](https://github.com/oalders/dot-files) repo.
 
