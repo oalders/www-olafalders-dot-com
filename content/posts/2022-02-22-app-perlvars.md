@@ -2,8 +2,8 @@
 title: "Finding Unused Perl Variables"
 type: post
 author: oalders
-date: 2022-02-17T18:45:11-05:00
-url: "2022/02/17/finding-unused-perl-variables"
+date: 2022-02-22T12:45:11-05:00
+url: "2022/02/22/finding-unused-perl-variables"
 categories:
   - perl
   - linting
