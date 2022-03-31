@@ -18,7 +18,7 @@ Back at the [QA Hackathon in Rugby][2], we had a great group of hackers together
   <br /> <a href="https://www.flickr.com/photos/jj_perl/25991401684/in/album-72157667398548526/" title="P4230367.jpg"><img loading="lazy" src="https://c5.staticflickr.com/2/1669/25991401684_7e29da3427_z.jpg" width="640" height="480" alt="P4230367.jpg" /></a><br />
 </center>
 
-The first dedicated MetaCPAN hackathon will be held at the offices of [ServerCentral][3]  
+The first dedicated MetaCPAN hackathon will be held at the offices of [ServerCentral][3]
 in Chicago, from November 17th through 20th. The primary goal for this hackathon is to complete MetaCPAN’s transition to [Elasticsearch][4] version 2. This will enable the live service to run on a cluster of machines, greatly improving reliability and performance. The hackathon will also give the core team a chance to plan work for the coming 18 months.
 
 The meta::hack event is a hackathon where we're bringing together key developers to work on the MetaCPAN search engine and API. This will give core team members time to work together to complete the transition to Elasticsearch version 2, and time to discuss gnarly issues and plan the roadmap beyond the v1 upgrade.
@@ -27,8 +27,8 @@ MetaCPAN is now one of the key tools in a Perl developer's toolbox, so supportin
 
 ## Why sponsor the MetaCPAN Hackathon?
 
-• If your company uses Perl in any way, then your developers almost certainly use MetaCPAN to find CPAN modules, and they probably use other tools that are built on the MetaCPAN API.  
-• The MetaCPAN upgrade will improve the search engine and the API for all Perl developers. As a critical tool, we need it to be always available, and fast. This upgrade is a key step in that direction.  
+• If your company uses Perl in any way, then your developers almost certainly use MetaCPAN to find CPAN modules, and they probably use other tools that are built on the MetaCPAN API.
+• The MetaCPAN upgrade will improve the search engine and the API for all Perl developers. As a critical tool, we need it to be always available, and fast. This upgrade is a key step in that direction.
 • This is a good way to establish your company as a friend of Perl, for example if you're hiring.
 
 ## Participants
@@ -43,11 +43,11 @@ The work to upgrade Elasticsearch began in [May of 2014][5]. It continued in ear
 
 The primary goal of meta::hack is to complete the port to Elasticsearch version 2, so the public API and search engine can be switched over. There are a number of benefits:
 
-• Switching from a single server to a cluster of 3 servers, giving a more reliable service and improved performance.  
-• Once we decommission the old service, we’ll be able to set up a second cluster of 3 machines in a second data centre, for further improvements.  
-• We’ll be able to take advantage of new Elasticsearch features, like search suggesters.  
-• We’ll be able to use a new endpoint that has been developed specifically to speed up cpanminus lookups. Cpanminus is probably the most widely used CPAN client these days, so improving this will benefit a large percentage of the community.  
-• If and when search.cpan.org is decommissioned, we’ll be able to handle the extra traffic that will bring with it, and we’ll also have the redundancy to do this safely.  
+• Switching from a single server to a cluster of 3 servers, giving a more reliable service and improved performance.
+• Once we decommission the old service, we’ll be able to set up a second cluster of 3 machines in a second data centre, for further improvements.
+• We’ll be able to take advantage of new Elasticsearch features, like search suggesters.
+• We’ll be able to use a new endpoint that has been developed specifically to speed up cpanminus lookups. Cpanminus is probably the most widely used CPAN client these days, so improving this will benefit a large percentage of the community.
+• If and when search.cpan.org is decommissioned, we’ll be able to handle the extra traffic that will bring with it, and we’ll also have the redundancy to do this safely.
 • We’ll be able to shift focus back to bug fixes and new MetaCPAN features.
 
 ## Becoming a Sponsor

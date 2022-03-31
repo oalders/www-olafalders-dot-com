@@ -20,19 +20,19 @@ use warnings;
 use v5.10;
 use LWP::UserAgent;
 use HTTP::Request::Common;
- 
+
 my $ua = LWP::UserAgent->new();
 my $request = GET 'https://pause.perl.org/pause/authenquery';
- 
+
 $request->authorization_basic('szabgab', '*******');
- 
+
 my $response = $ua->request($request);
 say $response->as_string();
 ```
 
 Let's run it to see what the output looks like.
 
-```perl
+```text
 olaf$ perl gabor.pl
 HTTP/1.0 401 Unauthorized
 Connection: close
@@ -72,7 +72,7 @@ my $response = $ua->request($request);
 
 The output we get is:
 
-```perl
+```text
 olaf$ perl basic-authentication.pl
 GET https://pause.perl.org/pause/authenquery
 
@@ -119,7 +119,7 @@ GET https://pause.perl.org/pause/authenquery
 
 You can see that the debugging version is just one line longer. I added 2 lines and removed a print statement. It prints out a whole pile of (nicely?) formatted information. Let's try running it with valid credentials. (Brace yourself, there's going to be a lot of output.)
 
-```
+```text
 olaf$ LWPCL_REDACT_HEADERS='Authorization' perl basic-authentication.pl
 GET https://pause.perl.org/pause/authenquery
 
@@ -170,13 +170,13 @@ GET https://pause.perl.org/pause/authenquery
     |  border="0" alt="PAUSE Logo"                                                                                      |
     |  width="177" height="43" align="left" /></a>
   </td>
-  
+
   <td nowrap="nowrap">
     &lt;h4                                          |
     |   style="margin: 0 0 0 0; padding: 0 1em;">The [Perl programming] Authors Upload                                  |
     |   Server&lt;/h4>
   </td>
-  
+
   <td align="right" style="width: 100%;">
     <table  cellpadding="3" cellspacing="0">
       <tr>
@@ -186,7 +186,7 @@ GET https://pause.perl.org/pause/authenquery
         </td>
       </tr>
     </table>     |
-    | 
+    |
   </td>
 </tr>&lt;/table>
 
@@ -196,64 +196,64 @@ GET https://pause.perl.org/pause/authenquery
 
 <table width="100%">
   |
-  |       
-  
+  |
+
   <tr>
     |
-    |        
-    
+    |
+
     <td>
       &#160;
     </td>                                                                                            |
-    |        
-    
+    |
+
     <td width="100%" valign="top" align="center">
       <div class="xexplain">
         Rev: 1071.02
       </div>
     </td>                 |
-    |        
-    
+    |
+
     <td valign="top">
       <div class="xexplain" align="right">
         To validate, download page first.
       </div>
-      
+
       <br />
     </td>    |
-    |       
+    |
   </tr>                                                                                                       |
-  |       
-  
+  |
+
   <tr>
     |
-    |        
-    
+    |
+
     <td width="100%">
-      
+
     </td>                                                                                     |
-    |        
-    
+    |
+
     <td>
       |
       |         <a href="http://jigsaw.w3.org/css-validator/">&lt;img loading="lazy"                                                        |
       |            src="/pause/vcss.gif"                                                                                  |
       |            alt="Valid CSS!" height="31" width="88" /></a>                                                         |
-      |        
+      |
     </td>                                                                                                      |
-    |        
-    
+    |
+
     <td>
       |
       |         <a href="http://validator.w3.org/file-upload.html">                                                       |
       |          &lt;img loading="lazy" src="/pause/valid-xhtml10.gif"                                                                      |
       |            alt="Valid XHTML 1.0!" height="31" width="88" />                                                       |
       |         </a>                                                                                                      |
-      |        
+      |
     </td>                                                                                                      |
-    |       
+    |
   </tr>                                                                                                       |
-  |      
+  |
 </table>                                                                                                     |
 | &lt;/body>                                                                                                    |
 '-------------------------------------------------------------------------------------------------------------------'
@@ -300,7 +300,7 @@ Let's make it prettier. We'll do this by installing [HTML::FormatText::Lynx](htt
 
 Let's run it again. I'll only show you the changed part. Instead of just displaying the text with the HTML stripped away, we get something nicer to look at.
 
-```
+```text
 .------------------------------------------------------------------------------------------------------------------------------------------------------.
 | Text                                                                                                                                                 |
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -450,7 +450,7 @@ my $response = $ua->request($request);
 
 Let's see what we get:
 
-```
+```text
 olaf$ LWPCL_REDACT_HEADERS='Authorization' perl basic-authentication.pl
 GET https://pause.perl.org/pause/authenquery
 
