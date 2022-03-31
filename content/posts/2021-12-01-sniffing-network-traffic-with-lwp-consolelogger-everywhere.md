@@ -9,6 +9,7 @@ categories:
   - Programming
   - LWP::ConsoleLogger
   - CPAN
+description: "Today an interesting question came up about whether or not Carton uses HTTPS and also which CPAN mirror it downloads from. I wondered if [LWP::ConsoleLogger::Everywhere](https://metacpan.org/pod/LWP::ConsoleLogger::Everywhere) could be helpful."
 summary: "Today an interesting question came up about whether or not Carton uses HTTPS and also which CPAN mirror it downloads from. I wondered if [LWP::ConsoleLogger::Everywhere](https://metacpan.org/pod/LWP::ConsoleLogger::Everywhere) could be helpful."
 ---
 
@@ -30,7 +31,7 @@ perl -Ilib -MLWP::ConsoleLogger::Everywhere script/carton install
 
 ### The Output
 
-```bash
+```text
 Installing modules using /Users/olafalders/Documents/github/carton/cpanfile
 GET http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-0.48.tar.gz
 
@@ -70,7 +71,7 @@ PERL_CARTON_MIRROR="https://cpan.metacpan.org" \
 
 ### The Output
 
-```bash
+```text
 GET https://cpan.metacpan.org/modules/02packages.details.txt.gz
 
 .---------------------------------+--------------.
