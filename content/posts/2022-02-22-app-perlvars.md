@@ -7,9 +7,6 @@ url: "2022/02/22/finding-unused-perl-variables"
 categories:
   - perl
   - linting
-tags:
-  - perl
-  - linting
 description: "Find unused variables and make your code less confusing."
 summary: "When you find variables which have not been used, you may find yourself asking, \"why is this here?\" and you may not easily get an answer. Eliminating unused variables can be good for the performance of the code, but also good for everyone else on your team. So, we want to make sure we can remove old bits of unused code and also prevent new cases."
 toc: false
