@@ -6,7 +6,7 @@ type="post"
 url="/2013/06/29/perl-mongers-meetings-via-google-hangout"
 categories=[
   "perl",
-  "perl mongers",
+  "Perl Mongers",
   "toronto",
 ]
 +++

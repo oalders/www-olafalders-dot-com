@@ -10,7 +10,7 @@ categories=[
   "elasticsearch",
   "metacpan",
   "perl",
-  "perlmongers",
+  "Perl Mongers",
   "REST",
 ]
 +++
